@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import FontStyles from '../../utils/fontsHelper';
 import TestDevice from './test';
 import Readdata from './readData';
+import ConfigScreen from './config';
 
 const read = (props) => {
     let data = {
@@ -32,7 +33,7 @@ const Config = (props) => {
                 <Text>The Selected action is : {props.action}</Text>
             </View>
             <View style={styles.configDataContainer}>
-                {/* <TestDevice data={data}/> */}
+                <ConfigScreen data={data}/>
             </View>
         </>
     )

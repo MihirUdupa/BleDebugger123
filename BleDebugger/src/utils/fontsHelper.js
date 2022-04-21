@@ -30,6 +30,10 @@ const FontStyles = StyleSheet.create({
     },
     RespParagraph:{
         fontSize:16,
+    },
+    hintData:{
+        fontSize:10,
+        fontStyle:'italic'
     }
 })
 
