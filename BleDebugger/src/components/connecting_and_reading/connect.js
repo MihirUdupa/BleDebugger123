@@ -5,14 +5,16 @@ import Subtitle from '../../utils/subtitle';
 import Actionindicator from './actionIndicator';
 
 const Connect = (props) => {
+    console.log(props.route.params.data)
     const [action, setAction] = useState(null);
     const [screen, setScreen] = useState(null);
     let data = {
         'action':action
     }
+    let title = "Connected to Device : "+props.route.params.data.name;
     return(
         <SafeAreaView style={styles.container}>
-            <Header title='Connected to Device'/>
+            <Header title={title}/>
             <Subtitle subTitle = "select an option"/>
             <View style={styles.buttonContainer}>
                 <TouchableOpacity style={styles.button} onPress={() => {setAction("Read Data"), setScreen("Read")}}>
