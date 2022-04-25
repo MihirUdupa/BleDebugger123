@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 
 const FontStyles = StyleSheet.create({
     heading:{
-        fontSize:30,
+        fontSize:28,
         fontWeight:'bold',
         textDecorationLine:'underline',
     },

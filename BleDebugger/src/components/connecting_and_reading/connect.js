@@ -3,15 +3,29 @@ import {View, Text, SafeAreaView, StyleSheet, TouchableOpacity} from 'react-nati
 import Header from '../../utils/header';
 import Subtitle from '../../utils/subtitle';
 import Actionindicator from './actionIndicator';
+import RNBluetoothClassic, { BluetoothEventType, BluetoothDevice } from 'react-native-bluetooth-classic';
 
 const Connect = (props) => {
-    console.log(props.route.params.data)
     const [action, setAction] = useState(null);
     const [screen, setScreen] = useState(null);
     let data = {
-        'action':action
+        'action':action,
+        'id':props.route.params.data.id,
+        'name':props.route.params.data.name,
+        'device':props.route.params.data.device
     }
     let title = "Connected to Device : "+props.route.params.data.name;
+
+    const deviceDiscoonect = async (props) => {
+        let connected = await RNBluetoothClassic.getConnectedDevice(props.route.params.data.id);
+        if(connected){
+           let disconnected = await connected.disconnect();
+           if(disconnected){
+               console.log('connection terminated');
+           }
+        }
+    }
+
     return(
         <SafeAreaView style={styles.container}>
             <Header title={title}/>
@@ -23,13 +37,13 @@ const Connect = (props) => {
                 <TouchableOpacity style={styles.button} onPress={() => {setAction("One time configuration"), setScreen("Config")}}>
                     <Text>One Time configuration</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button} onPress={() => {setAction("Test Components"), setScreen("Test")}}>
+                <TouchableOpacity style={styles.button} onPress={() => {setAction("Test Components"), setScreen("Test"), {data}}}>
                     <Text>Test Components</Text>
                 </TouchableOpacity>
             </View>
             <Actionindicator action={data} screen={screen}/>
             <View style={styles.footer}>
-                <TouchableOpacity style={styles.footerButton}>
+                <TouchableOpacity style={styles.footerButton} onPress={() => deviceDiscoonect(props)}>
                     <Text>Terminate Connection</Text>
                 </TouchableOpacity>
             </View>

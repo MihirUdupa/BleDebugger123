@@ -12,7 +12,7 @@ const header = (props) =>{
 
 const styles = StyleSheet.create({
     headrercontainer:{
-        flex:0.1,
+        flex:0.2,
         alignItems: 'center', 
         justifyContent: 'center'
     }

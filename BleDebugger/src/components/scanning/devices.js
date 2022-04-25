@@ -6,7 +6,7 @@ import RNBluetoothClassic, { BluetoothEventType, BluetoothDevice } from 'react-n
 const Device = (props) => {
     let data = {
         "id":props.item.id,
-        "name":props.item.name
+        "name":props.item.name,
     }
 
     const checkbonded = async (id) => {
@@ -21,7 +21,6 @@ const Device = (props) => {
     }
 
     const connectionToDevice = async (id,props,device) => {
-        console.log('checking for device accepting state');
         let conectionOpts = {
             CONNECTOR_TYPE: "rfcomm",
             DELIMITER: "\n",
@@ -29,7 +28,6 @@ const Device = (props) => {
         }
         try{
             let connected = await device.connect(conectionOpts)
-            console.log(connected)
             if(connected){
                 props.props.navigation.navigate('Connect',{data})
             }
@@ -37,14 +35,23 @@ const Device = (props) => {
             console.log(err)
         }
     }
+
+    const cancelScan = async () => {
+        try{
+            let cancelled = await RNBluetoothClassic.cancelDiscovery();
+            console.log(cancelled);
+        }catch(err){
+            console.log(err)
+        }
+    }
     
     const connectToDevice = async (props) => {
+        await cancelScan()
         let Devicedata = data.id
         let device = props.item.device;
         let isPaired = await checkbonded(Devicedata);
         if(!isPaired){
             pairing = await RNBluetoothClassic.pairDevice(Devicedata);
-            console.log(pairing);
             if(pairing._nativeDevice.bonded == true){
                 connectionToDevice(Devicedata,props,device)
             }else{

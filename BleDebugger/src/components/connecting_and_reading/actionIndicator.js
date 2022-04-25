@@ -42,7 +42,7 @@ const Config = (props) => {
 const Testdevice = (props) => {
     let data = {
         'id':props.id,
-        'name':props.name
+        'name':props.name,
     }
     return(
         <>
