@@ -7,6 +7,7 @@ const Device = (props) => {
     let data = {
         "id":props.item.id,
         "name":props.item.name,
+        "navigation":props.navigation
     }
 
     const checkbonded = async (id) => {

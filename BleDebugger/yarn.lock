@@ -1001,7 +1001,7 @@
     "pirates" "^4.0.5"
     "source-map-support" "^0.5.16"
 
-"@babel/runtime@^7.12.5", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.1.5", "@babel/runtime@^7.12.5", "@babel/runtime@^7.8.4":
   "integrity" "sha512-lSiBBvodq29uShpWGNbgFdKYNiFDo5/HIYsaCEY9ff4sb10x9jizo2+pRrSyF4jKZCXqgzuqBOQKbUm90gQwJg=="
   "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.17.9.tgz"
   "version" "7.17.9"
@@ -2333,7 +2333,7 @@
   "resolved" "https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.2.tgz"
   "version" "1.1.2"
 
-"buffer@^5.4.3", "buffer@^5.5.0":
+"buffer@^5.2.1", "buffer@^5.4.3", "buffer@^5.5.0":
   "integrity" "sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ=="
   "resolved" "https://registry.npmjs.org/buffer/-/buffer-5.7.1.tgz"
   "version" "5.7.1"
@@ -5987,6 +5987,14 @@
   dependencies:
     "buffer" "^5.4.3"
 
+"react-native-bluetooth-serial-next@^1.2.3":
+  "integrity" "sha512-P5HtiiIvCkokR+kYWRioRn/wq/NgJjRtf15Sp/nRlD3xgjxQdhalXAlE6U/WlTZ1QWD5/FZO4/ur6ChRFO3n9Q=="
+  "resolved" "https://registry.npmjs.org/react-native-bluetooth-serial-next/-/react-native-bluetooth-serial-next-1.2.3.tgz"
+  "version" "1.2.3"
+  dependencies:
+    "@babel/runtime" "^7.1.5"
+    "buffer" "^5.2.1"
+
 "react-native-codegen@^0.0.13":
   "integrity" "sha512-rCh1P+s0Q4N6vNgS97ckafbhJRztz22+0l0VZoyQC06F07J98kI5cUByH0ATypPRIdpkMbAZc59DoPdDFc01bg=="
   "resolved" "https://registry.npmjs.org/react-native-codegen/-/react-native-codegen-0.0.13.tgz"
@@ -6038,7 +6046,7 @@
     "react-freeze" "^1.0.0"
     "warn-once" "^0.1.0"
 
-"react-native@*", "react-native@>=0.42.0", "react-native@>=0.57", "react-native@>=0.60.0", "react-native@0.68.1":
+"react-native@*", "react-native@>=0.40", "react-native@>=0.42.0", "react-native@>=0.57", "react-native@>=0.60.0", "react-native@0.68.1":
   "integrity" "sha512-5gfvslo5NO2Ece2k/q41eVOK3ca4u1QAOf+qM+auvOiUA4/QR5Yr0WfSGbRpUr2GaFgv7qP11F4+elCravg7uQ=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.68.1.tgz"
   "version" "0.68.1"

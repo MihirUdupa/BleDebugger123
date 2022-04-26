@@ -1,0 +1,76 @@
+{
+    {
+        "_bluetoothModule": {
+            "_eventEmitter": {
+                "_nativeModule": [NativeModule
+                ]
+            },
+            "_nativeModule": {
+                "accept": [Function promiseMethodWrapper
+                ],
+                "addListener": [Function nonPromiseMethodWrapper
+                ],
+                "availableFromDevice": [Function promiseMethodWrapper
+                ],
+                "cancelAccept": [Function promiseMethodWrapper
+                ],
+                "cancelDiscovery": [Function promiseMethodWrapper
+                ],
+                "clearFromDevice": [Function promiseMethodWrapper
+                ],
+                "connectToDevice": [Function promiseMethodWrapper
+                ],
+                "disconnectFromDevice": [Function promiseMethodWrapper
+                ],
+                "getBondedDevices": [Function promiseMethodWrapper
+                ],
+                "getConnectedDevice": [Function promiseMethodWrapper
+                ],
+                "getConnectedDevices": [Function promiseMethodWrapper
+                ],
+                "getConstants": [Function anonymous
+                ],
+                "isBluetoothAvailable": [Function promiseMethodWrapper
+                ],
+                "isBluetoothEnabled": [Function promiseMethodWrapper
+                ],
+                "isDeviceConnected": [Function promiseMethodWrapper
+                ],
+                "openBluetoothSettings": [Function nonPromiseMethodWrapper
+                ],
+                "pairDevice": [Function promiseMethodWrapper
+                ],
+                "readFromDevice": [Function promiseMethodWrapper
+                ],
+                "removeAllListeners": [Function nonPromiseMethodWrapper
+                ],
+                "removeListener": [Function nonPromiseMethodWrapper
+                ],
+                "requestBluetoothEnabled": [Function promiseMethodWrapper
+                ],
+                "setBluetoothAdapterName": [Function promiseMethodWrapper
+                ],
+                "startDiscovery": [Function promiseMethodWrapper
+                ],
+                "unpairDevice": [Function promiseMethodWrapper
+                ],
+                "writeToDevice": [Function promiseMethodWrapper
+                ]
+            }
+        },
+        "_nativeDevice": {
+            "address": "B4:E6:2D:97:5A:17",
+            "bonded": true,
+            "extra": {},
+            "id": "B4:E6:2D:97:5A:17",
+            "name": "BT_SPEAKER"
+        },
+        "address": "B4:E6:2D:97:5A:17",
+        "bonded": true,
+        "deviceClass": undefined,
+        "extra": {},
+        "id": "B4:E6:2D:97:5A:17",
+        "name": "BT_SPEAKER",
+        "rssi": undefined
+    }
+}

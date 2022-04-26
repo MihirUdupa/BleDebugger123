@@ -22,6 +22,7 @@ const Connect = (props) => {
            let disconnected = await connected.disconnect();
            if(disconnected){
                console.log('connection terminated');
+               props.navigation.navigate('Scanner');
            }
         }
     }
